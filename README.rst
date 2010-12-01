@@ -20,7 +20,7 @@ Documentation
 =============
 PySignals is directly extracted from the Django framework, therefore the best
 place to get documentation is from the 
-`Django Signals Documentation <http://docs.djangoproject.com/en/dev/ref/signals/>`_.
+`Django Signals Documentation <http://docs.djangoproject.com/en/dev/topics/signals/>`_.
 
 The only difference is that all occurrences of ``django.dispatch`` should be
 replaced by ``pysignals``.
