@@ -1,7 +1,7 @@
 import weakref
 import threading
 
-from pysignals.dispatch import saferef
+from pysignals import saferef
 
 __all__ = [ 'set_debug', 'Signal', 'receiver' ]
 

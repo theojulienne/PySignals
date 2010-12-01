@@ -1,8 +1,7 @@
 =========
 PySignals
 =========
-:Info: PySignals is a signal dispatcher for Python, extracted from the Django
-framework.
+:Info: PySignals is a signal dispatcher for Python, extracted from the Django framework.
 
 About
 =====
