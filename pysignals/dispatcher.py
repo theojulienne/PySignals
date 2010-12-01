@@ -257,7 +257,21 @@ class Signal(object):
                         del self.receivers[last_idx-idx]
         finally:
             self.lock.release()
+    
+    def receive(self, **kwargs):
+        """
+        A decorator for connecting receivers to this signal. Used by passing in the
+        keyword arguments to connect::
 
+            @post_save.receive(sender=MyModel)
+            def signal_receiver(sender, **kwargs):
+                ...
+
+        """
+        def _decorator(func):
+            self.connect(func, **kwargs)
+            return func
+        return _decorator
 
 def receiver(signal, **kwargs):
     """
