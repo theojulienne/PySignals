@@ -1,5 +1,6 @@
 import weakref
 import threading
+import sys
 
 from pysignals import saferef
 
@@ -198,8 +199,8 @@ class Signal(object):
         DispatcherKeyError.
 
         If any receiver raises an error (specifically any subclass of
-        Exception), the error instance is returned as the result for that
-        receiver.
+        Exception), a tuple of (type, value, traceback), as from sys.exc_info(),
+	 is returned as the result for that receiver.
         """
         responses = []
         if not self.receivers:
@@ -211,7 +212,7 @@ class Signal(object):
             try:
                 response = receiver(signal=self, sender=sender, **named)
             except Exception, err:
-                responses.append((receiver, err))
+                responses.append((receiver, sys.exc_info()))
             else:
                 responses.append((receiver, response))
         return responses
