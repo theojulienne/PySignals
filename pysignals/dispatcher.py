@@ -200,7 +200,7 @@ class Signal(object):
 
         If any receiver raises an error (specifically any subclass of
         Exception), a tuple of (type, value, traceback), as from sys.exc_info(),
-	 is returned as the result for that receiver.
+        is returned as the result for that receiver.
         """
         responses = []
         if not self.receivers:
