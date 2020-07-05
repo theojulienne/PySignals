@@ -11,7 +11,7 @@ except:
 
 
 setup(name='pysignals',
-      version='0.1.1',
+      version='0.1.3',
       packages=find_packages(),
       author='Theo Julienne',
       author_email='theo.julienne@{nospam}gmail.com',
