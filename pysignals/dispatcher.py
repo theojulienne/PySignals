@@ -3,7 +3,6 @@ import threading
 import weakref
 import logging
 import six
-from future.builtins import range
 
 from .inspect import func_accepts_kwargs
 
